@@ -7,7 +7,7 @@ const GifGrid = ({ category }) => {
 
   return (
     <>
-      <h3 className="animate__animated animate__fadeIn">{category}</h3>
+      <h3 className="animate__animated animate__fadeIn">Category: {category}</h3>
 
       {loading && <h2 className="animate__animated animate__fadeIn">Loading...</h2>}
 
