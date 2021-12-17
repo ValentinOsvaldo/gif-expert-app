@@ -17,13 +17,13 @@ yarn install
 
 ## Run server
 
-## Install dependencies with npm
+### Npm
 
 ```
 npm start
 ```
 
-## Install dependencies with yarn
+### Yarn
 
 ```
 yarn start
