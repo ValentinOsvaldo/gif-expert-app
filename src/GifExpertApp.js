@@ -3,7 +3,7 @@ import AddCategory from "./components/AddCategory";
 import GifGrid from "./components/GifGrid";
 
 const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["Halo"]);
+  const [categories, setCategories] = useState(["hello"]);
 
   return (
     <>
@@ -12,14 +12,14 @@ const GifExpertApp = () => {
 
       <hr />
 
-      <ol>
+      <section>
         {categories.map((category) => (
           <GifGrid 
             key={ category }
             category={ category } 
           />
         ))}
-      </ol>
+      </section>
     </>
   );
 };

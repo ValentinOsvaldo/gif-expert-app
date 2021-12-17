@@ -5,6 +5,8 @@ import GifExpertApp from './GifExpertApp';
 import './index.css';
 
 ReactDOM.render(
-  <GifExpertApp />,
+  <React.StrictMode> 
+    <GifExpertApp /> 
+  </React.StrictMode>,
   document.getElementById('root')
 );
