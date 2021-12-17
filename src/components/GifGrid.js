@@ -1,44 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import useFetchGifs from "../hooks/useFetchGifs";
 import GifGridItem from "./GifGridItem";
 
 const GifGrid = ({ category }) => {
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    getGifs();
-  }, []);
-
-  const getGifs = async () => {
-    const url = `https://api.giphy.com/v1/gifs/search?q=Halo&limit=10&api_key=Yla3TUzFNRLW0394Wa5N6iOntCjZRvvL`,
-      res = await fetch(url),
-      { data } = await res.json();
-
-    const gifs = data.map((img) => {
-      return {
-        id: img.id,
-        title: img.title,
-        url: img.images?.downsized_medium.url,
-      };
-    });
-
-    if (!res.ok) throw new Error("Error");
-
-    setImages(gifs);
-  };
+  const { data: images, loading } = useFetchGifs(category);
 
   return (
     <>
-      <h3>{category}</h3>
+      <h3 className="animate__animated animate__fadeIn">{category}</h3>
 
-      {
-        images.map( ( image ) => (
-          <GifGridItem 
-            key={ image.id } 
-            { ...image }
-          />
-        ) )
-      }
-      
+      {loading && <h2 className="animate__animated animate__fadeIn">Loading...</h2>}
+
+      <article className="container">
+        {images.map((image) => (
+          <GifGridItem key={image.id} {...image} />
+        ))}
+      </article>
     </>
   );
 };
