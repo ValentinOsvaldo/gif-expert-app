@@ -8,25 +8,15 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 body {
+  background-color: #222;
+  color: #fff;
   margin: 0;
-  padding: 1rem 3rem;
-}
-
-h1, h2, h3 { margin: .5rem 0; }
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.75rem;
-}
-
-h3 {
-  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 h1 {
@@ -54,24 +44,67 @@ img {
   height: auto;
 }
 
-.container {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax( 300px, 1fr ));
+ol {
+  padding: 0;
 }
 
-.card {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
+figure {
   margin: 0;
 }
 
 figcaption {
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-start
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.card > img {
+  object-fit: cover;
+}
+
+.card-name {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
   color: #fff;
   position: absolute;
-  text-align: center;
-  padding: 1rem;
-  width: max-content;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+
+.footer-link {
+  color: #fff;
+  margin: 0 1rem;
+  transition: all .4s ease;
+}
+
+.footer-link:hover {
+  opacity: .75;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 1rem 3rem;
+  }
 }

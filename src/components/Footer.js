@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <p>Created by Osvaldo Valentin</p>
 
       <nav className="footer-nav">
@@ -10,6 +10,7 @@ const Footer = () => {
           href="https://github.com/ValentinOsvaldo"
           target="_blank"
           rel="noopener noreferrer"
+          className="footer-link"
         >
           GitHub
         </a>
@@ -17,6 +18,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/valentin-osvaldo/"
           target="_blank"
           rel="noopener noreferrer"
+          className="footer-link"
         >
           Linkedin
         </a>
