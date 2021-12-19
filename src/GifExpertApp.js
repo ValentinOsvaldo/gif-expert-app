@@ -3,8 +3,8 @@ import AddCategory from "./components/AddCategory";
 import Footer from "./components/Footer";
 import GifGrid from "./components/GifGrid";
 
-const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["hello"]);
+const GifExpertApp = ({ defaultCategories = [] }) => {
+  const [categories, setCategories] = useState(defaultCategories);
 
   return (
     <>

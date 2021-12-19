@@ -1,3 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GifGridItem /> Mostrar correctamente el componente 1`] = `ShallowWrapper {}`;
+exports[`<GifGridItem /> Mostrar correctamente el componente 1`] = `
+<figure
+  className="card animate__animated animate__fadeIn"
+>
+  <img
+    alt="Title"
+    src="https://localhost/algo.jpg"
+  />
+  <figcaption
+    className="card-name"
+  >
+    <p>
+      Title
+    </p>
+  </figcaption>
+</figure>
+`;
